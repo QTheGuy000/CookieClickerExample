@@ -1,0 +1,46 @@
+[gd_scene load_steps=4 format=3 uid="uid://c0wnxqojsc8ip"]
+
+[ext_resource type="Texture2D" uid="uid://dbp1vp0ax20mu" path="res://icon.svg" id="1_n1crl"]
+[ext_resource type="Script" path="res://cookie.gd" id="2_0mmjn"]
+[ext_resource type="Script" path="res://cookie_label.gd" id="3_j30oa"]
+
+[node name="TestLevel" type="Node2D"]
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Cookie" type="TextureButton" parent="Control"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 14.35
+anchor_top = 7.35
+anchor_right = 14.35
+anchor_bottom = 7.35
+offset_left = -64.0
+offset_top = -64.0
+offset_right = 64.0
+offset_bottom = 64.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture_normal = ExtResource("1_n1crl")
+ignore_texture_size = true
+stretch_mode = 0
+script = ExtResource("2_0mmjn")
+pressed_color = Color(0.562702, 0.269326, 0.183285, 1)
+normal_color = Color(0.507809, 0.0873359, 0.337928, 1)
+metadata/_edit_use_anchors_ = true
+
+[node name="CookieLabel" type="Label" parent="Control"]
+layout_mode = 0
+offset_left = 40.0
+offset_top = 23.0
+offset_right = 240.0
+offset_bottom = 75.0
+script = ExtResource("3_j30oa")
+
+[connection signal="pressed" from="Control/Cookie" to="Control/Cookie" method="_on_pressed"]
