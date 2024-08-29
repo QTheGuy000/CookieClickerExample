@@ -43,4 +43,6 @@ offset_right = 240.0
 offset_bottom = 75.0
 script = ExtResource("3_j30oa")
 
+[connection signal="button_down" from="Control/Cookie" to="Control/Cookie" method="_on_button_down"]
+[connection signal="button_up" from="Control/Cookie" to="Control/Cookie" method="_on_button_up"]
 [connection signal="pressed" from="Control/Cookie" to="Control/Cookie" method="_on_pressed"]
