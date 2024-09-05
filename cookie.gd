@@ -12,3 +12,4 @@ func _on_button_down():
 func _on_button_up():
 	size = Vector2(128, 128)
 	global_position  += Vector2(-14, -14)
+	
